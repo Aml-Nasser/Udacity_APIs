@@ -1,0 +1,239 @@
+{
+	"id": "f06e9f03-f5b5-4538-90ac-692c60e85e4c",
+	"name": "swaggerAPIs",
+	"timestamp": "2022-11-14T19:24:14.707Z",
+	"collection_id": "17173387-391a87df-f2d8-4670-be6a-59dd80354d51",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 12,
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "65dea551-a2cc-428d-b437-d240c548aef9",
+			"name": "Retrive Authors",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 485,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"response should contain id": true,
+				"response should contain idBook": true,
+				"response should contain firstName": true,
+				"response should contain lastName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should contain id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should contain idBook": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should contain firstName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should contain lastName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				485
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"response should contain id": true,
+					"response should contain idBook": true,
+					"response should contain firstName": true,
+					"response should contain lastName": true
+				}
+			]
+		},
+		{
+			"id": "cbbfe138-4288-497d-81c8-93467a37b485",
+			"name": "Add Author",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"validate that firstName,lastName are mandatory": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate that firstName,lastName are mandatory": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"validate that firstName,lastName are mandatory": true
+				}
+			]
+		},
+		{
+			"id": "45311d7f-cd2d-42b4-bc4d-a21052891ab4",
+			"name": "Book",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/1",
+			"time": 83,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"validate the idBook": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate the idBook": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				83
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"validate the idBook": true
+				}
+			]
+		},
+		{
+			"id": "4c10d9f5-babd-456e-9679-8de5a4bb5196",
+			"name": "Update Author Name",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 82,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"validate the firstName Update": false,
+				"validate the lastName Update": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate the firstName Update": {
+					"pass": 0,
+					"fail": 1
+				},
+				"validate the lastName Update": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"validate the firstName Update": false,
+					"validate the lastName Update": false
+				}
+			]
+		},
+		{
+			"id": "aeeb6f52-f639-4365-aa3c-d2f59f0c3d00",
+			"name": "Retrive After update",
+			"url": "http://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+			"time": 77,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"validate the firstName Update": false,
+				"validate the lastName Update": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate the firstName Update": {
+					"pass": 0,
+					"fail": 1
+				},
+				"validate the lastName Update": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				77
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"validate the firstName Update": false,
+					"validate the lastName Update": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 803,
+	"collection": {
+		"requests": [
+			{
+				"id": "65dea551-a2cc-428d-b437-d240c548aef9",
+				"method": "GET"
+			},
+			{
+				"id": "cbbfe138-4288-497d-81c8-93467a37b485",
+				"method": "POST"
+			},
+			{
+				"id": "45311d7f-cd2d-42b4-bc4d-a21052891ab4",
+				"method": "GET"
+			},
+			{
+				"id": "4c10d9f5-babd-456e-9679-8de5a4bb5196",
+				"method": "GET"
+			},
+			{
+				"id": "aeeb6f52-f639-4365-aa3c-d2f59f0c3d00",
+				"method": "GET"
+			}
+		]
+	}
+}

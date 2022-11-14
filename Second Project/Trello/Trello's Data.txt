@@ -1,0 +1,106 @@
+key b17c9b37f79ee3124408ef60b2f3cdd7
+Token 5ea591913a15c0ec0e2e4496dba53e9b979ffa2c009d9bc12bf6850c5fde89f2
+
+"boards": {
+            "totalPerMember": {
+                "status": "ok",
+                "disableAt": 4500,
+                "warnAt": 3600
+            }
+        },
+        "orgs": {
+            "totalPerMember": {
+                "status": "ok",
+                "disableAt": 850,
+                "warnAt": 680
+            }
+        }
+    },
+    "loginTypes": [
+        "atlassian"
+    ],
+    "marketingOptIn": {
+        "optedIn": true,
+        "date": "2021-08-13T13:49:38.775Z"
+    },
+    "messagesDismissed": [
+        {
+            "_id": "611678829f1297261460bd5d",
+            "name": "team-join-cta-banner-611678817deb67874ea59d1e",
+            "count": 1,
+            "lastDismissed": "2021-08-13T13:49:54.020Z"
+        },
+        {
+            "_id": "614b6d0a482657375b4c671d",
+            "name": "team-join-cta-banner-614b6d098cd74f0b79d3e73e",
+            "count": 2,
+            "lastDismissed": "2021-09-22T17:51:06.949Z"
+        }
+    ],
+    "oneTimeMessagesDismissed": [
+        "sent-possible-new-signup-event",
+        "close-menu-of-first-board",
+        "nusku.views-switcher-upsell-default-open",
+        "headerMemberMenuAddAccount",
+        "workspace-nav-enabled",
+        "workspace-nav-spotlight",
+        "team-boards-join-link-banner-614b6d098cd74f0b79d3e73e",
+        "614b6d098cd74f0b79d3e73e-memberHomeScreenPromptFull",
+        "611678817deb67874ea59d1e-memberHomeScreenPromptFull",
+        "ack-new-feature-BoardShareButton-1653084000000"
+    ],
+    "prefs": {
+        "privacy": {
+            "fullName": "public",
+            "avatar": "public"
+        },
+        "sendSummaries": true,
+        "minutesBetweenSummaries": 60,
+        "minutesBeforeDeadlineToNotify": 1440,
+        "colorBlind": false,
+        "locale": "en-US"
+    },
+    "trophies": [],
+    "uploadedAvatarHash": null,
+    "uploadedAvatarUrl": null,
+    "premiumFeatures": [
+        "additionalBoardBackgrounds",
+        "additionalStickers",
+        "customBoardBackgrounds",
+        "customEmoji",
+        "customStickers",
+        "plugins",
+        "views",
+        "workspaceViews"
+    ],
+    "isAaMastered": true,
+    "ixUpdate": "187",
+    "boards": [
+        {
+            "id": "63728ed0af9c2e042455d810",
+            "name": "Testing1",
+            "closed": false,
+            "idOrganization": "611678817deb67874ea59d1e",
+            "pinned": false
+        },
+        {
+            "id": "6372448759421000ca7612cc",
+            "name": "Testing2",
+            "closed": false,
+            "idOrganization": "611678817deb67874ea59d1e",
+            "pinned": false
+        },
+        {
+            "id": "63728ea7162937004a4b23ff",
+            "name": "Testing2",
+            "closed": false,
+            "idOrganization": "611678817deb67874ea59d1e",
+            "pinned": false
+        },
+        {
+            "id": "637240c10d73e8040aade9bc",
+            "name": "TestingAPI",
+            "closed": false,
+            "idOrganization": "611678817deb67874ea59d1e",
+            "pinned": false
+        }

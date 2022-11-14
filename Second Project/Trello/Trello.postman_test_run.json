@@ -1,0 +1,312 @@
+{
+	"id": "41e6eff2-ea1e-4417-a31f-940fad1edd29",
+	"name": "Trello",
+	"timestamp": "2022-11-14T20:22:01.697Z",
+	"collection_id": "17173387-af18ed47-d1f3-4340-80e4-aceae121dc56",
+	"folder_id": 0,
+	"environment_id": "17173387-bbe806e7-6eb8-4a0e-8a79-c5dbcc3bd5e7",
+	"totalPass": 24,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "1f80ada8-3844-426b-9ecd-89d01b2292df",
+			"name": "Create Board",
+			"url": "https://api.trello.com/1/boards/?name=Testing1&key=b17c9b37f79ee3124408ef60b2f3cdd7&token=5ea591913a15c0ec0e2e4496dba53e9b979ffa2c009d9bc12bf6850c5fde89f2",
+			"time": 450,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"permissionLevel validation": true,
+				"canBePrivate validation": true,
+				"canInvite validation": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"permissionLevel validation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"canBePrivate validation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"canInvite validation": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				450
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"permissionLevel validation": true,
+					"canBePrivate validation": true,
+					"canInvite validation": true
+				}
+			]
+		},
+		{
+			"id": "1e06faf6-902b-48a1-9198-f4d5d9e99ed9",
+			"name": "Board Counter",
+			"url": "https://api.trello.com/1/members/me?boards=open&key=b17c9b37f79ee3124408ef60b2f3cdd7&token=5ea591913a15c0ec0e2e4496dba53e9b979ffa2c009d9bc12bf6850c5fde89f2",
+			"time": 230,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"Boards above 1": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Boards above 1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				230
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"Boards above 1": true
+				}
+			]
+		},
+		{
+			"id": "cc53dcd0-8604-43dd-8f9c-33b015243a15",
+			"name": "Create a List",
+			"url": "https://api.trello.com/1/lists?name={name}&idBoard=5abbe4b7ddc1b351ef961414&key=b17c9b37f79ee3124408ef60b2f3cdd7&token=5ea591913a15c0ec0e2e4496dba53e9b979ffa2c009d9bc12bf6850c5fde89f2",
+			"time": 289,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"verify the response keys": true,
+				"closed validation": true,
+				"limits validation": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify the response keys": {
+					"pass": 1,
+					"fail": 0
+				},
+				"closed validation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"limits validation": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				289
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"verify the response keys": true,
+					"closed validation": true,
+					"limits validation": true
+				}
+			]
+		},
+		{
+			"id": "e4a9e871-6480-4bba-9930-c75c30ce5a02",
+			"name": "Get Lists on a Board",
+			"url": "https://api.trello.com/1/boards/6116794289b5642a881b83f7/lists?key=b17c9b37f79ee3124408ef60b2f3cdd7&token=5ea591913a15c0ec0e2e4496dba53e9b979ffa2c009d9bc12bf6850c5fde89f2",
+			"time": 213,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"Validate the number of the list": true,
+				"Validate the Lists name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the number of the list": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the Lists name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				213
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"Validate the number of the list": true,
+					"Validate the Lists name": true
+				}
+			]
+		},
+		{
+			"id": "a86d4d90-ffa2-44bc-bd94-333653a3758b",
+			"name": "Archive or un-archive a list",
+			"url": "https://api.trello.com/1/lists/63728ed0af9c2e042455d817/closed?key=b17c9b37f79ee3124408ef60b2f3cdd7&token=5ea591913a15c0ec0e2e4496dba53e9b979ffa2c009d9bc12bf6850c5fde89f2&value=true",
+			"time": 237,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"Set-Cookie header validation": true,
+				"closed validation": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Set-Cookie header validation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"closed validation": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				237
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"Set-Cookie header validation": true,
+					"closed validation": true
+				}
+			]
+		},
+		{
+			"id": "7613822b-cf61-4bdf-820b-54be6c9d3cc6",
+			"name": "Delete a Board",
+			"url": "https://api.trello.com/1/boards/6372448759421000ca7612cc?key=b17c9b37f79ee3124408ef60b2f3cdd7&token=5ea591913a15c0ec0e2e4496dba53e9b979ffa2c009d9bc12bf6850c5fde89f2",
+			"time": 617,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"Assert on the delete message": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert on the delete message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				617
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"Assert on the delete message": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2036,
+	"collection": {
+		"requests": [
+			{
+				"id": "1f80ada8-3844-426b-9ecd-89d01b2292df",
+				"method": "POST"
+			},
+			{
+				"id": "1e06faf6-902b-48a1-9198-f4d5d9e99ed9",
+				"method": "GET"
+			},
+			{
+				"id": "cc53dcd0-8604-43dd-8f9c-33b015243a15",
+				"method": "POST"
+			},
+			{
+				"id": "e4a9e871-6480-4bba-9930-c75c30ce5a02",
+				"method": "GET"
+			},
+			{
+				"id": "a86d4d90-ffa2-44bc-bd94-333653a3758b",
+				"method": "PUT"
+			},
+			{
+				"id": "7613822b-cf61-4bdf-820b-54be6c9d3cc6",
+				"method": "DELETE"
+			}
+		]
+	}
+}

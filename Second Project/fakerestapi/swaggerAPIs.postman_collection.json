@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "391a87df-f2d8-4670-be6a-59dd80354d51",
+		"name": "swaggerAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17173387"
+	},
+	"item": [
+		{
+			"name": "Retrive Authors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonResponse = pm.response.json();\r",
+							"//console.log(pm.response.json());\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should contain id\", function(){\r",
+							"    pm.expect(jsonResponse.id).to.not.eql(null);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should contain idBook\", function(){\r",
+							"    pm.expect(jsonResponse.idBook).to.not.eql(null);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should contain firstName\", function(){\r",
+							"    pm.expect(jsonResponse.firstName).to.not.eql(null);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should contain lastName\", function(){\r",
+							"    pm.expect(jsonResponse.lastName).to.not.eql(null);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/Authors",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Author",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonResponse = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate that firstName,lastName are mandatory\", function(){\r",
+							"    pm.expect(jsonResponse).to.have.any.keys(\"firstName\",\"lastName\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 0,\r\n    \"idBook\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/Authors",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonResponse = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate the idBook\", function(){\r",
+							"for(let Num = 0; Num < jsonResponse.length ; Num++){\r",
+							"    pm.expect(jsonResponse[Num].idBook).to.equal(1);\r",
+							"}\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/Authors/authors/books/{{idBook}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"authors",
+						"books",
+						"{{idBook}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Author Name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonResponse = pm.response.json();\r",
+							"//console.log(pm.response.json());\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate the firstName Update\", function(){\r",
+							"    pm.expect(jsonResponse.firstName).to.eqls(\"Aml\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate the lastName Update\", function(){\r",
+							"    pm.expect(jsonResponse.lastName).to.eqls(\"Nasser\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"idBook\": 0,\r\n  \"firstName\": \"Aml\",\r\n  \"lastName\": \"Nasser\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/Authors/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrive After update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonResponse = pm.response.json();\r",
+							"//console.log(pm.response.json());\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate the firstName Update\", function(){\r",
+							"    pm.expect(jsonResponse.firstName).to.eqls(\"Aml\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"validate the lastName Update\", function(){\r",
+							"    pm.expect(jsonResponse.lastName).to.eqls(\"Nasser\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/Authors/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "idBook",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}

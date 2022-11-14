@@ -1,0 +1,88 @@
+GET /api/v1/Authors	
+ TC 1
+o	 Test Case: response should be 200 OK
+o	 Expected Result: 200 OK
+o	 Actual Result: 200 OK
+o	 Status: Pass
+TC 2
+o	 Test Case: response should contain id
+o	 Expected Result: "id": !null,
+o	 Actual Result: "id": !null,
+o	 Status: Pass
+
+o	 Test Case: response should contain idBook
+o	 Expected Result: "idBook": !null,
+o	 Actual Result: "idBook": !null,
+o	 Status: Pass
+
+o	 Test Case: response should contain firstName
+o	 Expected Result: "firstName": !null,
+o	 Actual Result: "firstName": !null,
+o	 Status: Pass
+
+o	 Test Case: response should contain lastName
+o	 Expected Result: "lastName": !null,
+o	 Actual Result: "lastName": !null,
+o	 Status: Pass
+
+Test Case Example 1
+POST /api/v1/Authors
+ TC 1
+o	 Test Case: response should be 201 Created
+o	 Expected Result: 201 Created
+o	 Actual Result: 200 OK
+o	 Status: fail
+
+TC 2
+o	 Test Case: body should contain firstName 
+         if "firstName" == null,
+o	 Expected Result: 400 bad request
+o	 Actual Result: 200 OK
+o	 Status: fail
+
+o	 Test Case: body should contain lastName
+         if "lastName" == null,
+o	 Expected Result: 400 bad request
+o	 Actual Result: 200 OK
+o	 Status: fail
+
+Test Case Example 2
+GET /api/v1/Authors/authors/books/{idBook}
+
+TC 1
+Enter idBook = 1
+o	 Test Case: Search by "idBook" should return relative data in response body
+o	 Expected Result: all result response contain idBook = 1
+o	 Actual Result: all result response contain idBook = 1
+o	 Status: Pass
+
+Test Case Example 3
+PUT /api/v1/Authors/{id}
+TC 1
+Enter id = 1
+o	 Test Case: update firstName, lastName successfully
+o	 Expected Result: firstName, lastName updated in the response
+o	 Actual Result: firstName, lastName updated in the response
+o	 Status: Pass
+
+GET /api/v1/Authors/{id}
+Enter id = 1
+TC 1
+o	 Test Case: retrive updated id firstName, lastName
+o	 Expected Result: firstName, lastName updated as per last put action
+o	 Actual Result: Not updated
+o	 Status: fail
+
+
+
+
+
+
+
+
+
+
+
+
+
+
